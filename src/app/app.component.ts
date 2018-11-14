@@ -7,6 +7,8 @@ import { HomePage } from '../pages/home/home';
 import { ListPage } from '../pages/list/list';
 import { CadastroPage } from '../pages/cadastro/cadastro';
 import { ListaUsuarioPage } from '../pages/lista-usuario/lista-usuario';
+import { CadastroVisitantePage } from '../pages/cadastro-visitante/cadastro-visitante';
+import { ListaVisitantePage } from '../pages/lista-visitante/lista-visitante';
 
 @Component({
   templateUrl: 'app.html'
@@ -25,7 +27,8 @@ export class MyApp {
     this.pages = [
       { title: 'Home', component: HomePage },
       { title: 'Usuários', component: ListaUsuarioPage },
-      { title: 'List', component: ListPage }
+      { title: 'List', component: ListPage },
+      { title: 'Visitantes', component: ListaVisitantePage },
     ];
 
   }

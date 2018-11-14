@@ -14,6 +14,10 @@ import { CadastroPage } from '../pages/cadastro/cadastro';
 import { UsuariosProvider } from '../providers/usuarios/usuarios';
 import { HttpClientModule } from '@angular/common/http';
 import { ListaUsuarioPage } from '../pages/lista-usuario/lista-usuario';
+import { VisitanteProvider } from '../providers/visitante/visitante';
+import { CadastroVisitantePage } from '../pages/cadastro-visitante/cadastro-visitante';
+import { ListaVisitantePageModule } from '../pages/lista-visitante/lista-visitante.module';
+import { ListaVisitantePage } from '../pages/lista-visitante/lista-visitante';
 
 @NgModule({
   declarations: [
@@ -22,6 +26,8 @@ import { ListaUsuarioPage } from '../pages/lista-usuario/lista-usuario';
     CadastroPage,
     ListaUsuarioPage,
     ListPage,
+    CadastroVisitantePage,
+    ListaVisitantePage,
   ],
   imports: [
     BrowserModule,
@@ -34,13 +40,16 @@ import { ListaUsuarioPage } from '../pages/lista-usuario/lista-usuario';
     HomePage,
     CadastroPage,
     ListaUsuarioPage,
-    ListPage
+    ListPage,
+    CadastroVisitantePage,
+    ListaVisitantePage,
   ],
   providers: [
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    UsuariosProvider
+    UsuariosProvider,
+    VisitanteProvider
   ]
 })
 export class AppModule {}
