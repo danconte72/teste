@@ -24,6 +24,10 @@ import { UploadProvider } from '../providers/upload';
 import { AngularFireStorageModule } from '@angular/fire/storage';
 
 
+import { VisitanteProvider } from '../providers/visitante/visitante';
+import { CadastroVisitantePage } from '../pages/cadastro-visitante/cadastro-visitante';
+import { ListaVisitantePageModule } from '../pages/lista-visitante/lista-visitante.module';
+import { ListaVisitantePage } from '../pages/lista-visitante/lista-visitante';
 
 @NgModule({
   declarations: [
@@ -33,7 +37,9 @@ import { AngularFireStorageModule } from '@angular/fire/storage';
     ListaUsuarioPage,
     ListPage,
     CadastroNoticiaPage,
-    LoginPage
+    LoginPage,
+    CadastroVisitantePage,
+    ListaVisitantePage,
   ],
   imports: [ 
 
@@ -51,7 +57,9 @@ import { AngularFireStorageModule } from '@angular/fire/storage';
     ListaUsuarioPage,
     ListPage,
     CadastroNoticiaPage,
-    LoginPage
+    LoginPage,
+    CadastroVisitantePage,
+    ListaVisitantePage,
   ],
   providers: [
     StatusBar,
@@ -61,6 +69,7 @@ import { AngularFireStorageModule } from '@angular/fire/storage';
     NoticiaProvider,
     LoginProvider,
     UploadProvider,
+    VisitanteProvider
   ]
 })
 export class AppModule {}

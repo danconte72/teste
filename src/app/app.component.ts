@@ -16,6 +16,8 @@ import { LoginPage } from '../pages/login/login';
 
 
 
+import { CadastroVisitantePage } from '../pages/cadastro-visitante/cadastro-visitante';
+import { ListaVisitantePage } from '../pages/lista-visitante/lista-visitante';
 
 @Component({
   templateUrl: 'app.html'
@@ -36,8 +38,8 @@ export class MyApp {
       { title: 'Usuários', component: ListaUsuarioPage },
       { title: 'Cadastrar Usuários', component: CadastroPage },
       { title: 'Cadastrar uma Noticia', component: CadastroNoticiaPage},
-      { title: 'Login', component: LoginPage}
-    
+      { title: 'Login', component: LoginPage},
+      { title: 'Visitantes', component: ListaVisitantePage },
     ];
 
   }
