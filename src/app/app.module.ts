@@ -14,6 +14,9 @@ import { CadastroPage } from '../pages/cadastro/cadastro';
 import { UsuariosProvider } from '../providers/usuarios/usuarios';
 import { HttpClientModule } from '@angular/common/http';
 import { ListaUsuarioPage } from '../pages/lista-usuario/lista-usuario';
+import { LocaisProvider } from '../providers/locais/locais';
+import { CadastroLocalPage } from '../pages/cadastro-local/cadastro-local';
+import { ListaLocalPage } from '../pages/lista-local/lista-local';
 
 @NgModule({
   declarations: [
@@ -22,6 +25,8 @@ import { ListaUsuarioPage } from '../pages/lista-usuario/lista-usuario';
     CadastroPage,
     ListaUsuarioPage,
     ListPage,
+    ListaLocalPage,
+    CadastroLocalPage,
   ],
   imports: [
     BrowserModule,
@@ -34,13 +39,17 @@ import { ListaUsuarioPage } from '../pages/lista-usuario/lista-usuario';
     HomePage,
     CadastroPage,
     ListaUsuarioPage,
-    ListPage
+    ListPage,
+    ListaLocalPage,
+    CadastroLocalPage,
+
   ],
   providers: [
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    UsuariosProvider
+    UsuariosProvider,
+    LocaisProvider
   ]
 })
 export class AppModule {}

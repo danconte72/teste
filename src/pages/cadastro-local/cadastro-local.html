@@ -1,0 +1,28 @@
+<!--
+  Generated template for the CadastroLocalPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>cadastro-local</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+    <ion-list>
+        <ion-item>
+          <ion-label color="primary" floating>cidade</ion-label>
+          <ion-input [(ngModel)]="local.cidade" ></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label color="primary" floating>bairro</ion-label>
+          <ion-input [(ngModel)]="local.bairro" ></ion-input>
+        </ion-item>
+    </ion-list>
+    <button ion-button (click)="salvar()" > salvar </button>
+</ion-content>
