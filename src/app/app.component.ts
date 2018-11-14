@@ -8,6 +8,8 @@ import { ListPage } from '../pages/list/list';
 import { CadastroPage } from '../pages/cadastro/cadastro';
 import { ListaUsuarioPage } from '../pages/lista-usuario/lista-usuario';
 import { ListaLocalPage } from '../pages/lista-local/lista-local';
+import { CadastroVisitantePage } from '../pages/cadastro-visitante/cadastro-visitante';
+import { ListaVisitantePage } from '../pages/lista-visitante/lista-visitante';
 
 @Component({
   templateUrl: 'app.html'
@@ -28,6 +30,7 @@ export class MyApp {
       { title: 'Usuários', component: ListaUsuarioPage },
       { title: 'List', component: ListPage },
       { title: 'Local', component: ListaLocalPage },
+      { title: 'Visitantes', component: ListaVisitantePage },
     ];
 
   }
