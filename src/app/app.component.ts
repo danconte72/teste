@@ -2,18 +2,27 @@ import { Component, ViewChild } from '@angular/core';
 import { Nav, Platform } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
+//import { AppComponent } from './app.component';
+import { AngularFireModule } from '@angular/fire';
+//import { environment } from '../environments/environment';
 
 import { HomePage } from '../pages/home/home';
-import { ListPage } from '../pages/list/list';
-import { CadastroPage } from '../pages/cadastro/cadastro';
 import { ListaUsuarioPage } from '../pages/lista-usuario/lista-usuario';
+import { CadastroPage} from '../pages/cadastro/cadastro';
+import { CadastroNoticiaPage} from '../pages/cadastro-noticia/cadastro-noticia';
+import { LoginPage } from '../pages/login/login';
+
+
+
 
 @Component({
   templateUrl: 'app.html'
 })
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
-
+ 
   rootPage: any = HomePage;
 
   pages: Array<{title: string, component: any}>;
@@ -25,11 +34,16 @@ export class MyApp {
     this.pages = [
       { title: 'Home', component: HomePage },
       { title: 'Usuários', component: ListaUsuarioPage },
-      { title: 'List', component: ListPage }
+      { title: 'Cadastrar Usuários', component: CadastroPage },
+      { title: 'Cadastrar uma Noticia', component: CadastroNoticiaPage},
+      { title: 'Login', component: LoginPage}
+    
     ];
 
   }
 
+
+  
   initializeApp() {
     this.platform.ready().then(() => {
       // Okay, so the platform is ready and our plugins are available.
@@ -44,4 +58,9 @@ export class MyApp {
     // we wouldn't want the back button to show in this scenario
     this.nav.setRoot(page.component);
   }
+
+
+
+  
+
 }

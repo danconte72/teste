@@ -1,0 +1,54 @@
+
+
+
+
+
+<ion-header>
+  
+  <ion-navbar>
+    <ion-title>Cadastro de Noticias</ion-title>
+  </ion-navbar>
+  
+</ion-header>
+
+
+<ion-content padding>
+  <ion-row>
+<ion-col col-6>
+    <ion-item>
+        <ion-label floating>Titulo da Noticia</ion-label>
+        <ion-input type="titulo"></ion-input>
+    </ion-item>
+
+    <ion-item>
+        <input type="file" id="file" [hidden]=true accept="image/*" (change)="detectFiles($event)"/>		
+        <label for="file" ion-button large>
+          <ion-icon name="camera" icon-only></ion-icon>
+        </label>
+        <ion-thumbnail *ngFor="let image of images" item-start>
+          <div class="img-wrap">
+            <a class="close" (click)="removeFile()">
+              <ion-icon  name="close-circle"></ion-icon>
+            </a>
+            <img class="image-fit image-wrap" [src]="image"/>				    
+          </div>
+        </ion-thumbnail>
+      </ion-item>
+
+
+</ion-col>
+<ion-col col-6>
+
+    <ion-textarea placeholder="Descreva o conteúdo da Noticia" rows="10"></ion-textarea>
+</ion-col>
+  </ion-row>
+
+
+
+
+
+
+  <button ion-button full>Publicar</button>
+
+  
+</ion-content>

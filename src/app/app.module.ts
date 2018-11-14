@@ -14,6 +14,16 @@ import { CadastroPage } from '../pages/cadastro/cadastro';
 import { UsuariosProvider } from '../providers/usuarios/usuarios';
 import { HttpClientModule } from '@angular/common/http';
 import { ListaUsuarioPage } from '../pages/lista-usuario/lista-usuario';
+import { NoticiaProvider } from '../providers/noticia/noticia';
+import { CadastroNoticiaPage } from '../pages/cadastro-noticia/cadastro-noticia';
+import { LoginPage } from '../pages/login/login';
+import { LoginProvider } from '../providers/login/login';
+import { AngularFireModule } from '@angular/fire';
+import { FIREBASE_CONFIG } from '../app/app.firebase.config';
+import { UploadProvider } from '../providers/upload';
+import { AngularFireStorageModule } from '@angular/fire/storage';
+
+
 
 @NgModule({
   declarations: [
@@ -22,10 +32,15 @@ import { ListaUsuarioPage } from '../pages/lista-usuario/lista-usuario';
     CadastroPage,
     ListaUsuarioPage,
     ListPage,
+    CadastroNoticiaPage,
+    LoginPage
   ],
-  imports: [
+  imports: [ 
+
     BrowserModule,
     IonicModule.forRoot(MyApp),
+    AngularFireModule.initializeApp(FIREBASE_CONFIG),
+    AngularFireStorageModule,
     HttpClientModule, 
   ],
   bootstrap: [IonicApp],
@@ -34,13 +49,18 @@ import { ListaUsuarioPage } from '../pages/lista-usuario/lista-usuario';
     HomePage,
     CadastroPage,
     ListaUsuarioPage,
-    ListPage
+    ListPage,
+    CadastroNoticiaPage,
+    LoginPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    UsuariosProvider
+    UsuariosProvider,
+    NoticiaProvider,
+    LoginProvider,
+    UploadProvider,
   ]
 })
 export class AppModule {}
