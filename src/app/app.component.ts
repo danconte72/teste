@@ -16,6 +16,7 @@ import { LoginPage } from '../pages/login/login';
 
 
 
+import { ListaLocalPage } from '../pages/lista-local/lista-local';
 import { CadastroVisitantePage } from '../pages/cadastro-visitante/cadastro-visitante';
 import { ListaVisitantePage } from '../pages/lista-visitante/lista-visitante';
 
@@ -39,6 +40,7 @@ export class MyApp {
       { title: 'Cadastrar Usuários', component: CadastroPage },
       { title: 'Cadastrar uma Noticia', component: CadastroNoticiaPage},
       { title: 'Login', component: LoginPage},
+      { title: 'Local', component: ListaLocalPage },
       { title: 'Visitantes', component: ListaVisitantePage },
     ];
 
