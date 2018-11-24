@@ -32,6 +32,14 @@ export class ListaVisitantePage {
     console.log("deveria chamar a tela de cadastro");
     this.navCtrl.push(CadastroVisitantePage);
   }
+  
+  editar(id) {
+    console.log("deveria chamar a tela de ediçao");
+    this.navCtrl.push(CadastroVisitantePage,
+      {
+      id: id
+    });
+  }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad ListaVisitantePage');

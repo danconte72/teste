@@ -33,6 +33,14 @@ export class ListaCargoPage {
     this.navCtrl.push(CadastroCargoPage);
   }
 
+  editar(id) {
+    console.log("deveria chamar a tela de ediçao");
+    this.navCtrl.push(CadastroCargoPage,
+      {
+      id: id
+    });
+  }
+
   ionViewDidLoad() {
     console.log('ionViewDidLoad ListaCargoPage');
   }

@@ -33,6 +33,14 @@ export class ListaLocalPage {
     this.navCtrl.push(CadastroLocalPage);
   }
 
+  editar(id) {
+    console.log("deveria chamar a tela de ediçao");
+    this.navCtrl.push(CadastroLocalPage,
+      {
+      id: id
+    });
+  }
+
   ionViewDidLoad() {
     console.log('ionViewDidLoad ListaUsuarioPage');
   }
