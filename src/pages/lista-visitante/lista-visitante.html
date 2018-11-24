@@ -29,7 +29,7 @@
     <ion-item *ngFor="let visitante of lista">
       <ion-label>
         <h2>{{visitante.nome}}</h2>
-        <button ion-button (click)="editar(Visitantes.id)">Editar</button>
+        <button ion-button (click)="editar(visitante.id)">Editar</button>
       </ion-label>
     </ion-item>
   </ion-list>
