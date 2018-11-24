@@ -30,7 +30,10 @@ export class ListaUsuarioPage {
 
   editar(id) {
     console.log("deveria chamar a tela de ediçao");
-    this.navCtrl.push(CadastroPage);
+    this.navCtrl.push(CadastroPage,
+      {
+      id: id
+    });
   }
 
   ionViewDidLoad() {
