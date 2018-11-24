@@ -45,4 +45,13 @@ export class UsuariosProvider {
     }
   }
 
+  listarPorId(id){
+    let usuario = {
+      "id":"5",
+      "nome":"zortéa",
+      "cpf":"104.201.589-95"
+    }
+    return usuario;
+  }
+
 }

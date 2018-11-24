@@ -28,6 +28,11 @@ export class ListaUsuarioPage {
     this.navCtrl.push(CadastroPage);
   }
 
+  editar(id) {
+    console.log("deveria chamar a tela de ediçao");
+    this.navCtrl.push(CadastroPage);
+  }
+
   ionViewDidLoad() {
     console.log('ionViewDidLoad ListaUsuarioPage');
   }
