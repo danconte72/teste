@@ -24,10 +24,6 @@ export class CadastroVisitantePage {
      public navParams: NavParams,
      private provedor: VisitanteProvider,
      ) {
-<<<<<<< HEAD
-    this.visitante=new Visitante();
-  }
-=======
       let id = this.navParams.data.id;
       if (id != null){// editar
         this.visitante = this.provedor.listarPorId(id);
@@ -36,14 +32,15 @@ export class CadastroVisitantePage {
       }
       console.log(this.visitante);
     }
->>>>>>> 5c440731165b6e7bb44f5f41b4f625e49ac3f9f0
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad CadastroVisitantePage');
   }
 
   salvar(){
-    this.provedor.salvar(this.visitante);
+    console.log(this.visitante);
+    console.log(this.provedor.salvar(this.visitante));
     this.navCtrl.pop();
   }
+
 }

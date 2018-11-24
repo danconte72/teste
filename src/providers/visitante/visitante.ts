@@ -39,13 +39,18 @@ export class VisitanteProvider {
   }
 
   salvar(visitante: Visitante) {
-    this.visitantesFake.push(visitante);
-    console.log("estou salvando o seguinte visitante:");
+    if(visitante.id == null){
+      this.visitantesFake.push(visitante);
+      console.log("estou salvando o seguinte usuario:");
+    } else {
+      console.log("estou editando o seguinte usuario:");
+    }
     console.log(visitante);
     return {
-      "id": "1"
+      "id": visitante.id
     }
   }
+
   listarPorId(id){
     let visitantes = this.visitantesFake
     .filter(

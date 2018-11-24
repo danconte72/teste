@@ -34,13 +34,18 @@ export class CargosProvider {
   }
 
   salvar(cargo : Cargo) {
-    this.cargoFake.push(cargo);
-    console.log("salvando o seguintes Cargos:");
+    if(cargo.id == null){
+      this.cargoFake.push(cargo);
+      console.log("estou salvando o seguinte usuario:");
+    } else {
+      console.log("estou editando o seguinte usuario:");
+    }
     console.log(cargo);
     return {
-      "id" : "3"
+      "id": cargo.id
     }
   }
+
   listarPorId(id){
     let cargo = this.cargoFake
     .filter(
