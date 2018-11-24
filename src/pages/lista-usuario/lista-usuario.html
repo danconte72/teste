@@ -16,7 +16,7 @@
   </ion-fab>
   <ion-list>
     <ion-list-header>
-      Usuarios
+      Usuários
       <button ion-button icon-only item-end clear>
         <ion-icon name="people"></ion-icon>
       </button>
@@ -25,6 +25,7 @@
       <ion-label>
         <h2>{{usuario.nome}}</h2>
         <h3>{{usuario.eMail}}</h3>
+        <button ion-button (click)="editar(usuario.id)">Editar</button>
       </ion-label>
     </ion-item>
   </ion-list>
