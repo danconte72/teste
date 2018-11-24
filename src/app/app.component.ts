@@ -19,6 +19,7 @@ import { LoginPage } from '../pages/login/login';
 import { ListaLocalPage } from '../pages/lista-local/lista-local';
 import { CadastroVisitantePage } from '../pages/cadastro-visitante/cadastro-visitante';
 import { ListaVisitantePage } from '../pages/lista-visitante/lista-visitante';
+import { ListaCargoPage } from '../pages/lista-cargo/lista-cargo';
 
 @Component({
   templateUrl: 'app.html'
@@ -42,6 +43,7 @@ export class MyApp {
       { title: 'Login', component: LoginPage},
       { title: 'Local', component: ListaLocalPage },
       { title: 'Visitantes', component: ListaVisitantePage },
+      { title: 'Cargos', component: ListaCargoPage },
     ];
 
   }

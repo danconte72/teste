@@ -1,0 +1,30 @@
+<!--
+  Generated template for the CadastrarCargoPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Cadastro de cargos</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+
+
+<ion-content padding>
+  <ion-list>
+      <ion-item>
+        <ion-label color="primary" floating>Nome</ion-label>
+        <ion-input [(ngModel)]="cargo.nome" ></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label color="primary" floating>Cargo</ion-label>
+        <ion-input [(ngModel)]="cargo.cargo" ></ion-input>
+      </ion-item>
+  </ion-list>
+  <button ion-button (click)="salvar()" > Salvar </button>
+</ion-content>

@@ -18,8 +18,6 @@ import { AngularFireModule } from '@angular/fire';
 import { FIREBASE_CONFIG } from '../app/app.firebase.config';
 import { UploadProvider } from '../providers/upload';
 import { AngularFireStorageModule } from '@angular/fire/storage';
-
-
 import { LocaisProvider } from '../providers/locais/locais';
 import { CadastroLocalPage } from '../pages/cadastro-local/cadastro-local';
 import { ListaLocalPage } from '../pages/lista-local/lista-local';
@@ -27,6 +25,9 @@ import { VisitanteProvider } from '../providers/visitante/visitante';
 import { CadastroVisitantePage } from '../pages/cadastro-visitante/cadastro-visitante';
 import { ListaVisitantePageModule } from '../pages/lista-visitante/lista-visitante.module';
 import { ListaVisitantePage } from '../pages/lista-visitante/lista-visitante';
+import { CargosProvider } from '../providers/cargos/cargos';
+import { ListaCargoPage } from '../pages/lista-cargo/lista-cargo';
+import { CadastroCargoPage } from '../pages/cadastro-cargo/cadastro-cargo';
 
 @NgModule({
   declarations: [
@@ -41,6 +42,8 @@ import { ListaVisitantePage } from '../pages/lista-visitante/lista-visitante';
     CadastroLocalPage,
     CadastroVisitantePage,
     ListaVisitantePage,
+    ListaCargoPage,
+    CadastroCargoPage,
   ],
   imports: [ 
 
@@ -63,6 +66,9 @@ import { ListaVisitantePage } from '../pages/lista-visitante/lista-visitante';
     CadastroLocalPage,
     CadastroVisitantePage,
     ListaVisitantePage,
+    ListaCargoPage,
+    CadastroCargoPage,
+    
   ],
   providers: [
     StatusBar,
@@ -73,7 +79,9 @@ import { ListaVisitantePage } from '../pages/lista-visitante/lista-visitante';
     LoginProvider,
     UploadProvider,
     LocaisProvider,
-    VisitanteProvider
+    VisitanteProvider,
+    CargosProvider,
+    
   ]
 })
 export class AppModule {}
