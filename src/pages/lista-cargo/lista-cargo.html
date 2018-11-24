@@ -1,5 +1,5 @@
 <!--
-  Generated template for the ListaVisitantePage page.
+  Generated template for the ListaCargoPage page.
 
   See http://ionicframework.com/docs/components/#navigation for more info on
   Ionic pages and navigation.
@@ -7,7 +7,7 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>lista-visitante</ion-title>
+    <ion-title>lista-cargo</ion-title>
   </ion-navbar>
 
 </ion-header>
@@ -16,22 +16,22 @@
 <ion-content padding>
   <ion-fab right bottom>
     <button ion-fab (click)="adicionar()">
-      <ion-icon name="person-add"></ion-icon>
+      <ion-icon name="add"></ion-icon>
     </button>
   </ion-fab>
   <ion-list>
     <ion-list-header>
-      Visitantes
+      Cargos
       <button ion-button icon-only item-end clear>
-        <ion-icon name="people"></ion-icon>
+        <ion-icon name="hammer"></ion-icon>
       </button>
     </ion-list-header>
-    <ion-item *ngFor="let visitante of lista">
+    <ion-item *ngFor="let cargo of lista">
       <ion-label>
-        <h2>{{visitante.nome}}</h2>
-        <button ion-button (click)="editar(Visitantes.id)">Editar</button>
+        <h2>{{cargo.nome}}</h2>
+        <h3>{{cargo.cargo}}</h3>
+        <button ion-button (click)="editar(local.id)">Editar</button>
       </ion-label>
     </ion-item>
   </ion-list>
-  
 </ion-content>

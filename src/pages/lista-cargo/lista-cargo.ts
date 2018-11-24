@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { Visitante } from '../../models/visitante';
-import { VisitanteProvider } from '../../providers/visitante/visitante';
-import { CadastroVisitantePage } from '../cadastro-visitante/cadastro-visitante';
+import { CargosProvider } from '../../providers/cargos/cargos';
+import { Cargo } from '../../models/cargo';
+import { CadastroCargoPage } from '../cadastro-cargo/cadastro-cargo';
 
 /**
- * Generated class for the ListaVisitantePage page.
+ * Generated class for the ListaCargoPage page.
  *
  * See https://ionicframework.com/docs/components/#navigation for more info on
  * Ionic pages and navigation.
@@ -13,38 +13,36 @@ import { CadastroVisitantePage } from '../cadastro-visitante/cadastro-visitante'
 
 @IonicPage()
 @Component({
-  selector: 'page-lista-visitante',
-  templateUrl: 'lista-visitante.html',
+  selector: 'page-lista-cargo',
+  templateUrl: 'lista-cargo.html',
 })
-export class ListaVisitantePage {
+export class ListaCargoPage {
 
-  private lista: Array<Visitante>;
+  private lista: Array<Cargo>;
 
   constructor(
     public navCtrl: NavController, 
     public navParams: NavParams,
-    private provedor: VisitanteProvider
+    private provedor: CargosProvider
   ) {
     this.lista = this.provedor.listar();
   }
 
   adicionar() {
     console.log("deveria chamar a tela de cadastro");
-    this.navCtrl.push(CadastroVisitantePage);
+    this.navCtrl.push(CadastroCargoPage);
   }
-  
+
   editar(id) {
     console.log("deveria chamar a tela de ediçao");
-    this.navCtrl.push(CadastroVisitantePage,
+    this.navCtrl.push(CadastroCargoPage,
       {
       id: id
     });
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad ListaVisitantePage');
+    console.log('ionViewDidLoad ListaCargoPage');
   }
-
-
 
 }

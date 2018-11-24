@@ -1,0 +1,46 @@
+
+<ion-header>
+  
+  <ion-navbar>
+    <ion-title>lista-mensagens</ion-title>
+  </ion-navbar>
+  
+</ion-header>
+
+
+<ion-content padding>
+  <ion-fab right bottom>
+    <button ion-fab (click)="adicionar()">
+      <ion-icon name="md-text"></ion-icon>
+    </button>
+  </ion-fab>
+  <ion-list>
+    <ion-list-header>
+      Mensagens
+      <button ion-button icon-only item-end clear>
+        <ion-icon name="ios-text"></ion-icon>
+      </button>
+    </ion-list-header>
+    <ion-row *ngFor="let mensagem of lista">
+      <ion-col col-4 *ngIf="mensagem.remetente == 'A'">
+        &nbsp;
+      </ion-col>
+      <ion-col col-8>
+        <ion-item>
+          <ion-avatar item-start> 
+            <img src="https://scontent.fcfc2-1.fna.fbcdn.net/v/t1.0-1/c0.0.160.160/p160x160/33965191_843467022511023_3284528973500907520_n.jpg?_nc_cat=111&_nc_ht=scontent.fcfc2-1.fna&oh=49bb376dcecf9e426abd7f145d0e9965&oe=5C3DCAD5">
+          </ion-avatar>
+          <ion-label>
+            <div item-end>
+              <p class="line-break">{{mensagem.texto}}</p>
+              <h3>{{mensagem.hora}}</h3>
+              <h3>{{mensagem.remetente}}</h3>
+            </div>
+          </ion-label>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+   
+  </ion-list>
+  
+</ion-content>
