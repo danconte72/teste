@@ -46,4 +46,13 @@ export class VisitanteProvider {
       "id": "1"
     }
   }
+  listarPorId(id){
+    let visitantes = this.visitantesFake
+    .filter(
+      function(elemento) {
+        return elemento.id == id
+      }
+    )
+    return visitantes[0];
+  }
 }

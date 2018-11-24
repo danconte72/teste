@@ -36,4 +36,13 @@ export class LocaisProvider {
       "id" : "3"
     }
   }
+  listarPorId(id){
+    let local = this.localFake
+    .filter(
+      function(elemento) {
+        return elemento.id == id
+      }
+    )
+    return local[0];
+  }
 }
