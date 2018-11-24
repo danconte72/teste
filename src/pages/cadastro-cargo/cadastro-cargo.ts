@@ -22,10 +22,15 @@ export class CadastroCargoPage {
     public navCtrl: NavController, 
     public navParams: NavParams,
     private provedor: CargosProvider,
-  ) {
-    this.cargo = new Cargo;
-    console.log(this.cargo);
-  }
+    ) {
+      let id = this.navParams.data.id;
+      if (id != null){// editar
+        this.cargo = this.provedor.listarPorId(id);
+      } else {//novo
+        this.cargo = new Cargo();
+      }
+      console.log(this.cargo);
+    }
 
   salvar() {
   
