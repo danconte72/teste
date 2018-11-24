@@ -24,8 +24,14 @@ export class CadastroVisitantePage {
      public navParams: NavParams,
      private provedor: VisitanteProvider,
      ) {
-    this.visitante=new Visitante();
-  }
+      let id = this.navParams.data.id;
+      if (id != null){// editar
+        this.visitante = this.provedor.listarPorId(id);
+      } else {//novo
+        this.visitante = new Visitante();
+      }
+      console.log(this.visitante);
+    }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad CadastroVisitantePage');

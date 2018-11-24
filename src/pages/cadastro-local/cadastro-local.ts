@@ -24,10 +24,15 @@ export class CadastroLocalPage {
     public navCtrl: NavController, 
     public navParams: NavParams,
     private provedor: LocaisProvider,
-  ) {
-    this.local = new Local();
-    console.log(this.local);
-   }
+    ) {
+      let id = this.navParams.data.id;
+      if (id != null){// editar
+        this.local = this.provedor.listarPorId(id);
+      } else {//novo
+        this.local = new Local();
+      }
+      console.log(this.local);
+    }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad CadastroLocalPage');
