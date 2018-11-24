@@ -32,8 +32,7 @@ export class UsuariosProvider {
   }
 
   listar() {
-    ///usuarios/
-    return this.usuariosFake;
+    return this.http.get('https://caps-ad.herokuapp.com/public/usuarios').toPromise();
   }
 
   salvar(usuario: Usuario) {

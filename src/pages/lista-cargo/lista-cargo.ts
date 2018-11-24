@@ -18,15 +18,20 @@ import { CadastroCargoPage } from '../cadastro-cargo/cadastro-cargo';
 })
 export class ListaCargoPage {
 
-  private lista: Array<Cargo>;
+  private lista;
 
   constructor(
     public navCtrl: NavController, 
     public navParams: NavParams,
     private provedor: CargosProvider
-  ) {
-    this.lista = this.provedor.listar();
-  }
+    ) {
+      this.provedor.listar().then( 
+        data => {
+          this.lista = data;
+        }
+      )
+      ;
+    }
 
   adicionar() {
     console.log("deveria chamar a tela de cadastro");

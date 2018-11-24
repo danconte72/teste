@@ -25,7 +25,7 @@ export class LocaisProvider {
   }
 
   listar() {
-    return this.localFake;
+    return this.http.get('https://caps-ad.herokuapp.com/public/local').toPromise();
   }
 
   salvar(local: Local) {

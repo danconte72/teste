@@ -13,15 +13,20 @@ import { CadastroPage } from '../cadastro/cadastro';
 export class ListaUsuarioPage {
 
 
-  private lista: Array<Usuario>;
+  private lista;
 
   constructor(
     public navCtrl: NavController, 
     public navParams: NavParams,
     private provedor: UsuariosProvider
-  ) {
-    this.lista = this.provedor.listar();
-  }
+    ) {
+      this.provedor.listar().then( 
+        data => {
+          this.lista = data;
+        }
+      )
+      ;
+    }
 
   adicionar() {
     console.log("deveria chamar a tela de cadastro");

@@ -30,7 +30,7 @@ export class CargosProvider {
   }
 
   listar() {
-    return this.cargoFake;
+    return this.http.get('https://caps-ad.herokuapp.com/public/cargos').toPromise();
   }
 
   salvar(cargo : Cargo) {

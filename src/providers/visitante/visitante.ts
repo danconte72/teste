@@ -35,7 +35,7 @@ export class VisitanteProvider {
   }
 
   listar() {
-    return this.visitantesFake;
+    return this.http.get('https://caps-ad.herokuapp.com/public/visitante').toPromise();
   }
 
   salvar(visitante: Visitante) {
