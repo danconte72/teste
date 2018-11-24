@@ -27,7 +27,7 @@ export class CadastroLocalPage {
     ) {
       let id = this.navParams.data.id;
       if (id != null){// editar
-        this.local = this.provedor.listarPorId(id);
+        this.local = this.provedor.listarPorId();
       } else {//novo
         this.local = new Local();
       }
