@@ -1,10 +1,15 @@
+<!--
+  Generated template for the ListaVisitantePage page.
 
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
 <ion-header>
-  
+
   <ion-navbar>
-    <ion-title>lista-usuario</ion-title>
+    <ion-title>lista-visitante</ion-title>
   </ion-navbar>
-  
+
 </ion-header>
 
 
@@ -16,16 +21,14 @@
   </ion-fab>
   <ion-list>
     <ion-list-header>
-      Usuários
+      Visitantes
       <button ion-button icon-only item-end clear>
         <ion-icon name="people"></ion-icon>
       </button>
     </ion-list-header>
-    <ion-item *ngFor="let usuario of lista">
+    <ion-item *ngFor="let visitante of lista">
       <ion-label>
-        <h2>{{usuario.nome}}</h2>
-        <h3>{{usuario.eMail}}</h3>
-        <button ion-button (click)="editar(usuario.id)">Editar</button>
+        <h2>{{visitante.nome}}</h2>
       </ion-label>
     </ion-item>
   </ion-list>

@@ -2,7 +2,7 @@
 <ion-header>
   
   <ion-navbar>
-    <ion-title>lista-usuario</ion-title>
+    <ion-title>lista-local</ion-title>
   </ion-navbar>
   
 </ion-header>
@@ -11,21 +11,20 @@
 <ion-content padding>
   <ion-fab right bottom>
     <button ion-fab (click)="adicionar()">
-      <ion-icon name="person-add"></ion-icon>
+      <ion-icon name="add"></ion-icon>
     </button>
   </ion-fab>
   <ion-list>
     <ion-list-header>
-      Usuários
+      Local
       <button ion-button icon-only item-end clear>
-        <ion-icon name="people"></ion-icon>
+        <ion-icon name="ios-pin"></ion-icon>
       </button>
     </ion-list-header>
-    <ion-item *ngFor="let usuario of lista">
+    <ion-item *ngFor="let local of lista">
       <ion-label>
-        <h2>{{usuario.nome}}</h2>
-        <h3>{{usuario.eMail}}</h3>
-        <button ion-button (click)="editar(usuario.id)">Editar</button>
+        <h2>{{local.cidade}}</h2>
+        <h3>{{local.bairro}}</h3>
       </ion-label>
     </ion-item>
   </ion-list>
