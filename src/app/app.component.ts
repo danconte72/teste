@@ -13,12 +13,14 @@ import { ListaUsuarioPage } from '../pages/lista-usuario/lista-usuario';
 import { CadastroPage} from '../pages/cadastro/cadastro';
 import { CadastroNoticiaPage} from '../pages/cadastro-noticia/cadastro-noticia';
 import { LoginPage } from '../pages/login/login';
+import {CadastroCategoriaPage} from '../pages/cadastro-categoria/cadastro-categoria'
 
 
 
 import { ListaLocalPage } from '../pages/lista-local/lista-local';
 import { CadastroVisitantePage } from '../pages/cadastro-visitante/cadastro-visitante';
 import { ListaVisitantePage } from '../pages/lista-visitante/lista-visitante';
+import { from } from 'rxjs/observable/from';
 
 @Component({
   templateUrl: 'app.html'

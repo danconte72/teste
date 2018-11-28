@@ -3,6 +3,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { NoticiaProvider } from '../../providers/noticia/noticia';
 import { Noticia } from '../../models/noticia';
 import { UploadProvider } from '../../providers/upload';
+import { CadastroCategoriaPage } from '../cadastro-categoria/cadastro-categoria';
 
 /**
  * Generated class for the CadastroNoticiaPage page.
@@ -58,5 +59,12 @@ private noticia : Noticia;
     this.images.pop();
     this.files.pop();
   }
+
+
+  adicionar() {
+    console.log("deveria chamar a tela de cadastro");
+    this.navCtrl.push(CadastroCategoriaPage);
+  }
+
 
 }

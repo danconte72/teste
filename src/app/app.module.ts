@@ -27,6 +27,9 @@ import { VisitanteProvider } from '../providers/visitante/visitante';
 import { CadastroVisitantePage } from '../pages/cadastro-visitante/cadastro-visitante';
 import { ListaVisitantePageModule } from '../pages/lista-visitante/lista-visitante.module';
 import { ListaVisitantePage } from '../pages/lista-visitante/lista-visitante';
+import { CategoriasProvider } from '../providers/categorias/categorias';
+import { CadastroCategoriaPage } from '../pages/cadastro-categoria/cadastro-categoria';
+import { CadastroCategoriaPageModule } from '../pages/cadastro-categoria/cadastro-categoria.module';
 
 @NgModule({
   declarations: [
@@ -41,6 +44,7 @@ import { ListaVisitantePage } from '../pages/lista-visitante/lista-visitante';
     CadastroLocalPage,
     CadastroVisitantePage,
     ListaVisitantePage,
+    CadastroCategoriaPage,
   ],
   imports: [ 
 
@@ -63,6 +67,7 @@ import { ListaVisitantePage } from '../pages/lista-visitante/lista-visitante';
     CadastroLocalPage,
     CadastroVisitantePage,
     ListaVisitantePage,
+    CadastroCategoriaPage,
   ],
   providers: [
     StatusBar,
@@ -73,7 +78,9 @@ import { ListaVisitantePage } from '../pages/lista-visitante/lista-visitante';
     LoginProvider,
     UploadProvider,
     LocaisProvider,
-    VisitanteProvider
+    VisitanteProvider,
+    CategoriasProvider,
+  
   ]
 })
 export class AppModule {}
