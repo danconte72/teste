@@ -4,17 +4,19 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { HomePage } from '../pages/home/home';
 import { ListaUsuarioPage } from '../pages/lista-usuario/lista-usuario';
-import { ListPage } from '../pages/list/list';
 import {CadastroMensagensPage} from '../pages/cadastro-mensagens/cadastro-mensagens';
 import { ListaMensagensPage } from '../pages/lista-mensagens/lista-mensagens';
 import { ListaMensagens2Page } from '../pages/lista-mensagens2/lista-mensagens2';
 import { CadastroPage} from '../pages/cadastro/cadastro';
 import { CadastroNoticiaPage} from '../pages/cadastro-noticia/cadastro-noticia';
 import { LoginPage } from '../pages/login/login';
+import {CadastroCategoriaPage} from '../pages/cadastro-categoria/cadastro-categoria';
 import { ListaLocalPage } from '../pages/lista-local/lista-local';
+import { from } from 'rxjs/observable/from';
 import { CadastroVisitantePage } from '../pages/cadastro-visitante/cadastro-visitante';
 import { ListaVisitantePage } from '../pages/lista-visitante/lista-visitante';
 import { ListaCargoPage } from '../pages/lista-cargo/lista-cargo';
+import { ListPage } from '../pages/list/list';
 
 @Component({
   templateUrl: 'app.html'
@@ -39,6 +41,8 @@ export class MyApp {
       { title: 'Local', component: ListaLocalPage },
       { title: 'Visitantes', component: ListaVisitantePage },
       { title: 'Cargos', component: ListaCargoPage },
+      { title: 'CadastrarNoticia', component: CadastroNoticiaPage},
+
     ];
 
   }

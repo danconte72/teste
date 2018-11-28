@@ -30,6 +30,9 @@ import { VisitanteProvider } from '../providers/visitante/visitante';
 import { CadastroVisitantePage } from '../pages/cadastro-visitante/cadastro-visitante';
 import { ListaVisitantePageModule } from '../pages/lista-visitante/lista-visitante.module';
 import { ListaVisitantePage } from '../pages/lista-visitante/lista-visitante';
+import { CategoriasProvider } from '../providers/categorias/categorias';
+import { CadastroCategoriaPage } from '../pages/cadastro-categoria/cadastro-categoria';
+import { CadastroCategoriaPageModule } from '../pages/cadastro-categoria/cadastro-categoria.module';
 import { CargosProvider } from '../providers/cargos/cargos';
 import { ListaCargoPage } from '../pages/lista-cargo/lista-cargo';
 import { CadastroCargoPage } from '../pages/cadastro-cargo/cadastro-cargo';
@@ -51,6 +54,7 @@ import { CadastroCargoPage } from '../pages/cadastro-cargo/cadastro-cargo';
     CadastroLocalPage,
     CadastroVisitantePage,
     ListaVisitantePage,
+    CadastroCategoriaPage,
     ListaCargoPage,
     CadastroCargoPage,
   ],
@@ -79,6 +83,7 @@ import { CadastroCargoPage } from '../pages/cadastro-cargo/cadastro-cargo';
     CadastroLocalPage,
     CadastroVisitantePage,
     ListaVisitantePage,
+    CadastroCategoriaPage,
     ListaCargoPage,
     CadastroCargoPage,
     
@@ -94,6 +99,8 @@ import { CadastroCargoPage } from '../pages/cadastro-cargo/cadastro-cargo';
     UploadProvider,
     LocaisProvider,
     VisitanteProvider,
+    CategoriasProvider,
+  
     CargosProvider,
     
   ]
