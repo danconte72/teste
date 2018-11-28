@@ -11,6 +11,8 @@ export class UsuariosProvider {
         "id" : "000001",
         "nome" : "volmar",
         "eMail" : "volmar@gmail.com",
+        "login" : "volmar01",
+        "senha" : "12345",
         "sexo" : "Masculino",
         "telefone" : "49 3567-0000",
         "cpf" : "000.111.222-33",
@@ -20,6 +22,8 @@ export class UsuariosProvider {
         "id" : "000002",
         "nome" : "guilherme",
         "eMail" : "guilhermer@gmail.com",
+        "login" : "gui01",
+        "senha" : "gloriadeus",
         "sexo" : "Masculino",
         "telefone" : "49 3567-1111",
         "cpf" : "012.345.678-90",
@@ -37,8 +41,7 @@ export class UsuariosProvider {
 
   salvar(usuario: Usuario) {
     if(usuario.id == null){
-      this.usuariosFake.push(usuario);
-      console.log("estou salvando o seguinte usuario:");
+      return this.http.get(`https://caps-ad.herokuapp.com/public/usuario/cadastrarUsuario/${usuario.nome}/${usuario.eMail}/${usuario.login}/${usuario.senha}/${usuario.sexo}/${usuario.telefone}/${usuario.cpf}/${usuario.dataNasc}`).toPromise();
     } else {
       console.log("estou editando o seguinte usuario:");
     }

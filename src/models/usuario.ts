@@ -6,6 +6,8 @@ export class Usuario {
   telefone : string;
   cpf : string;
   dataNasc : string;
+  login : string;
+  senha : string;
   constructor() {
   }
 

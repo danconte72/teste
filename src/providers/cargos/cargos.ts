@@ -16,12 +16,12 @@ export class CargosProvider {
     {
       "id" : "1",
       "nome" : "Lorivaldo Paulek", 
-      "cargo" : "Fisioterapeuta"
+      "setor" : "Fisioterapeuta"
     },
     {
       "id" : "2",
       "nome" : "Ronaldinho Gaucho",
-      "cargo" : "Direcao"
+      "setor" : "Direcao"
     }
   ];
 
@@ -35,8 +35,7 @@ export class CargosProvider {
 
   salvar(cargo : Cargo) {
     if(cargo.id == null){
-      this.cargoFake.push(cargo);
-      console.log("estou salvando o seguinte usuario:");
+      return this.http.get(`https://caps-ad.herokuapp.com/public/cargos/cadastrar/${cargo.nome}/${cargo.setor}`).toPromise();
     } else {
       console.log("estou editando o seguinte usuario:");
     }
