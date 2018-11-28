@@ -41,6 +41,8 @@ export class MyApp {
       { title: 'Local', component: ListaLocalPage },
       { title: 'Visitantes', component: ListaVisitantePage },
       { title: 'Cargos', component: ListaCargoPage },
+      { title: 'CadastrarNoticia', component: CadastroNoticiaPage},
+
     ];
 
   }

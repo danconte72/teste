@@ -30,15 +30,12 @@ import { VisitanteProvider } from '../providers/visitante/visitante';
 import { CadastroVisitantePage } from '../pages/cadastro-visitante/cadastro-visitante';
 import { ListaVisitantePageModule } from '../pages/lista-visitante/lista-visitante.module';
 import { ListaVisitantePage } from '../pages/lista-visitante/lista-visitante';
-<<<<<<< HEAD
 import { CategoriasProvider } from '../providers/categorias/categorias';
 import { CadastroCategoriaPage } from '../pages/cadastro-categoria/cadastro-categoria';
 import { CadastroCategoriaPageModule } from '../pages/cadastro-categoria/cadastro-categoria.module';
-=======
 import { CargosProvider } from '../providers/cargos/cargos';
 import { ListaCargoPage } from '../pages/lista-cargo/lista-cargo';
 import { CadastroCargoPage } from '../pages/cadastro-cargo/cadastro-cargo';
->>>>>>> 26d182abf14ed4b7bb26dbf4fdc58d647f3161a5
 
 @NgModule({
   declarations: [
@@ -57,12 +54,9 @@ import { CadastroCargoPage } from '../pages/cadastro-cargo/cadastro-cargo';
     CadastroLocalPage,
     CadastroVisitantePage,
     ListaVisitantePage,
-<<<<<<< HEAD
     CadastroCategoriaPage,
-=======
     ListaCargoPage,
     CadastroCargoPage,
->>>>>>> 26d182abf14ed4b7bb26dbf4fdc58d647f3161a5
   ],
   imports: [ 
 
@@ -89,13 +83,10 @@ import { CadastroCargoPage } from '../pages/cadastro-cargo/cadastro-cargo';
     CadastroLocalPage,
     CadastroVisitantePage,
     ListaVisitantePage,
-<<<<<<< HEAD
     CadastroCategoriaPage,
-=======
     ListaCargoPage,
     CadastroCargoPage,
     
->>>>>>> 26d182abf14ed4b7bb26dbf4fdc58d647f3161a5
   ],
   providers: [
     StatusBar,
@@ -108,13 +99,10 @@ import { CadastroCargoPage } from '../pages/cadastro-cargo/cadastro-cargo';
     UploadProvider,
     LocaisProvider,
     VisitanteProvider,
-<<<<<<< HEAD
     CategoriasProvider,
   
-=======
     CargosProvider,
     
->>>>>>> 26d182abf14ed4b7bb26dbf4fdc58d647f3161a5
   ]
 })
 export class AppModule {}
