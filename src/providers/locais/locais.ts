@@ -25,15 +25,29 @@ export class LocaisProvider {
   }
 
   listar() {
-    return this.localFake;
+    return this.http.get('https://caps-ad.herokuapp.com/public/local').toPromise();
   }
 
   salvar(local: Local) {
-    this.localFake.push(local);
-    console.log("salvando o seguintes locais:");
+    if(local.id == null){
+      this.localFake.push(local);
+      console.log("estou salvando o seguinte usuario:");
+    } else {
+      console.log("estou editando o seguinte usuario:");
+    }
     console.log(local);
     return {
-      "id" : "3"
+      "id": local.id
     }
+  }
+
+  listarPorId(id){
+    let local = this.localFake
+    .filter(
+      function(elemento) {
+        return elemento.id == id
+      }
+    )
+    return local[0];
   }
 }

@@ -2,32 +2,28 @@ import { Component, ViewChild } from '@angular/core';
 import { Nav, Platform } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
-//import { AppComponent } from './app.component';
-import { AngularFireModule } from '@angular/fire';
-//import { environment } from '../environments/environment';
-
 import { HomePage } from '../pages/home/home';
 import { ListaUsuarioPage } from '../pages/lista-usuario/lista-usuario';
+import {CadastroMensagensPage} from '../pages/cadastro-mensagens/cadastro-mensagens';
+import { ListaMensagensPage } from '../pages/lista-mensagens/lista-mensagens';
+import { ListaMensagens2Page } from '../pages/lista-mensagens2/lista-mensagens2';
 import { CadastroPage} from '../pages/cadastro/cadastro';
 import { CadastroNoticiaPage} from '../pages/cadastro-noticia/cadastro-noticia';
 import { LoginPage } from '../pages/login/login';
-import {CadastroCategoriaPage} from '../pages/cadastro-categoria/cadastro-categoria'
-
-
-
+import {CadastroCategoriaPage} from '../pages/cadastro-categoria/cadastro-categoria';
 import { ListaLocalPage } from '../pages/lista-local/lista-local';
+import { from } from 'rxjs/observable/from';
 import { CadastroVisitantePage } from '../pages/cadastro-visitante/cadastro-visitante';
 import { ListaVisitantePage } from '../pages/lista-visitante/lista-visitante';
-import { from } from 'rxjs/observable/from';
+import { ListaCargoPage } from '../pages/lista-cargo/lista-cargo';
+import { ListPage } from '../pages/list/list';
 
 @Component({
   templateUrl: 'app.html'
 })
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
- 
+
   rootPage: any = HomePage;
 
   pages: Array<{title: string, component: any}>;
@@ -38,18 +34,17 @@ export class MyApp {
     // used for an example of ngFor and navigation
     this.pages = [
       { title: 'Home', component: HomePage },
+      { title: 'Listar Mensagens', component: ListaMensagensPage},
+      { title: 'Listar Mensagens2', component: ListaMensagens2Page},
       { title: 'Usuários', component: ListaUsuarioPage },
-      { title: 'Cadastrar Usuários', component: CadastroPage },
-      { title: 'Cadastrar uma Noticia', component: CadastroNoticiaPage},
-      { title: 'Login', component: LoginPage},
+      { title: 'List', component: ListPage },
       { title: 'Local', component: ListaLocalPage },
       { title: 'Visitantes', component: ListaVisitantePage },
+      { title: 'Cargos', component: ListaCargoPage },
     ];
 
   }
 
-
-  
   initializeApp() {
     this.platform.ready().then(() => {
       // Okay, so the platform is ready and our plugins are available.
@@ -64,9 +59,4 @@ export class MyApp {
     // we wouldn't want the back button to show in this scenario
     this.nav.setRoot(page.component);
   }
-
-
-
-  
-
 }

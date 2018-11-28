@@ -16,7 +16,12 @@ export class CadastroPage {
     public navParams: NavParams,
     private provedor: UsuariosProvider,
   ) {
-    this.usuario = new Usuario;
+    let id = this.navParams.data.id;
+    if (id != null){// editar
+      this.usuario = this.provedor.listarPorId(id);
+    } else {//novo
+      this.usuario = new Usuario();
+    }
     console.log(this.usuario);
   }
 

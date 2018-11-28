@@ -18,19 +18,32 @@ import { CadastroVisitantePage } from '../cadastro-visitante/cadastro-visitante'
 })
 export class ListaVisitantePage {
 
-  private lista: Array<Visitante>;
+  private lista;
 
   constructor(
     public navCtrl: NavController, 
     public navParams: NavParams,
     private provedor: VisitanteProvider
   ) {
-    this.lista = this.provedor.listar();
+    this.provedor.listar().then( 
+      data => {
+        this.lista = data;
+      }
+    )
+    ;
   }
 
   adicionar() {
     console.log("deveria chamar a tela de cadastro");
     this.navCtrl.push(CadastroVisitantePage);
+  }
+  
+  editar(id) {
+    console.log("deveria chamar a tela de ediçao");
+    this.navCtrl.push(CadastroVisitantePage,
+      {
+      id: id
+    });
   }
 
   ionViewDidLoad() {

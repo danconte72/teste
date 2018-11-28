@@ -32,17 +32,30 @@ export class UsuariosProvider {
   }
 
   listar() {
-    ///usuarios/
-    return this.usuariosFake;
+    return this.http.get('https://caps-ad.herokuapp.com/public/usuarios').toPromise();
   }
 
   salvar(usuario: Usuario) {
-    this.usuariosFake.push(usuario);
-    console.log("estou salvando o seguinte usuario:");
+    if(usuario.id == null){
+      this.usuariosFake.push(usuario);
+      console.log("estou salvando o seguinte usuario:");
+    } else {
+      console.log("estou editando o seguinte usuario:");
+    }
     console.log(usuario);
     return {
-      "id": "1"
+      "id": usuario.id
     }
+  }
+
+  listarPorId(id){
+    let usuario = this.usuariosFake
+    .filter(
+      function(elemento) {
+        return elemento.id == id
+      }
+    )
+    return usuario[0];
   }
 
 }
