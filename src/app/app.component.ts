@@ -15,6 +15,8 @@ import { ListaLocalPage } from '../pages/lista-local/lista-local';
 import { CadastroVisitantePage } from '../pages/cadastro-visitante/cadastro-visitante';
 import { ListaVisitantePage } from '../pages/lista-visitante/lista-visitante';
 import { ListaCargoPage } from '../pages/lista-cargo/lista-cargo';
+import { ListaEntorpecentePage } from '../pages/lista-entorpecente/lista-entorpecente';
+
 
 @Component({
   templateUrl: 'app.html'
@@ -39,6 +41,7 @@ export class MyApp {
       { title: 'Local', component: ListaLocalPage },
       { title: 'Visitantes', component: ListaVisitantePage },
       { title: 'Cargos', component: ListaCargoPage },
+      { title: 'Entorpecentes', component: ListaEntorpecentePage },
     ];
 
   }

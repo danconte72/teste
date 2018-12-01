@@ -1,0 +1,32 @@
+
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>lista-entorpecente</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content padding>
+    <ion-fab right bottom>
+      <button ion-fab (click)="adicionar()">
+        <ion-icon name="add"></ion-icon>
+      </button>
+    </ion-fab>
+    <ion-list>
+      <ion-list-header>
+        Entorpecente
+        <button ion-button icon-only item-end clear>
+          <ion-icon name="metkit"></ion-icon>
+        </button>
+      </ion-list-header>
+      <ion-item *ngFor="let entorpecente of lista">
+        <ion-label>
+          <h2>{{entorpecente.nome}}</h2>
+          <button ion-button (click)="editar(entorpecente.id)">Editar</button>
+        </ion-label>
+      </ion-item>
+    </ion-list>
+    
+  </ion-content>
+  

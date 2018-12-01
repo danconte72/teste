@@ -33,6 +33,9 @@ import { ListaVisitantePage } from '../pages/lista-visitante/lista-visitante';
 import { CargosProvider } from '../providers/cargos/cargos';
 import { ListaCargoPage } from '../pages/lista-cargo/lista-cargo';
 import { CadastroCargoPage } from '../pages/cadastro-cargo/cadastro-cargo';
+import { EntorpecenteProvider } from '../providers/entorpecente/entorpecente';
+import { CadastroEntorpecentePage } from '../pages/cadastro-entorpecente/cadastro-entorpecente';
+import { ListaEntorpecentePage } from '../pages/lista-entorpecente/lista-entorpecente';
 
 @NgModule({
   declarations: [
@@ -53,6 +56,8 @@ import { CadastroCargoPage } from '../pages/cadastro-cargo/cadastro-cargo';
     ListaVisitantePage,
     ListaCargoPage,
     CadastroCargoPage,
+    ListaEntorpecentePage,
+    CadastroEntorpecentePage,
   ],
   imports: [ 
 
@@ -81,6 +86,8 @@ import { CadastroCargoPage } from '../pages/cadastro-cargo/cadastro-cargo';
     ListaVisitantePage,
     ListaCargoPage,
     CadastroCargoPage,
+    ListaEntorpecentePage,
+    CadastroEntorpecentePage,
     
   ],
   providers: [
@@ -95,7 +102,8 @@ import { CadastroCargoPage } from '../pages/cadastro-cargo/cadastro-cargo';
     LocaisProvider,
     VisitanteProvider,
     CargosProvider,
-    
-  ]
+    EntorpecenteProvider,
+  
+  ],
 })
 export class AppModule {}
