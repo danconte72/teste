@@ -19,6 +19,7 @@ import { VisitanteProvider } from '../../providers/visitante/visitante';
 export class CadastroVisitantePage {
 
   private visitante: Visitante;
+  
   constructor(
     public navCtrl: NavController,
      public navParams: NavParams,

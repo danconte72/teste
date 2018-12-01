@@ -13,7 +13,7 @@ export class UsuariosProvider {
   }
 
   listar() {
-    return this.http.get('https://caps-ad.herokuapp.com/public/usuarios').toPromise()
+    return this.http.get('https://caps-ad.herokuapp.com/public/usuario').toPromise()
     .then(
       data=>{
         this.usuario = data;

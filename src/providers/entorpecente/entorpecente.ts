@@ -2,39 +2,29 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Entorpecente } from '../../models/entorpencente';
 
- /*
-  Generated class for the EntorpecenteProvider provider.
-
-  See https://angular.io/guide/dependency-injection for more info on providers
-  and Angular DI.
-*/
-
 @Injectable()
 export class EntorpecenteProvider {
 
-  private entorpecentesFake = [
-    {
-      "id" : "1",
-      "nome" : "maconha", 
-    },
-    {
-      "id" : "2",
-      "nome" : "metanfetamina"
-    }
-  ];
+  private entorpecente;
 
   constructor(public http: HttpClient) {
     console.log('Hello EntorpecenteProvider Provider');
   }
 
   listar() {
-    return this.entorpecentesFake;
+    return this.http.get('https://caps-ad.herokuapp.com/public/entorpecente').toPromise()
+    .then(
+      data=>{
+        this.entorpecente = data;
+        return data;
+      }
+    );
   }
 
   salvar(entorpecente : Entorpecente) {
     if(entorpecente.id == null){
-      this.entorpecentesFake.push(entorpecente);
-      console.log("estou salvando o seguinte usuario:");
+      this.entorpecente.push(entorpecente);
+      return this.http.get(`https://caps-ad.herokuapp.com/public/local/cadastrarEntorpecente/${entorpecente.nome}`).toPromise();      
     } else {
       console.log("estou editando o seguinte usuario:");
     }
@@ -45,7 +35,7 @@ export class EntorpecenteProvider {
   }
 
   listarPorId(id){
-    let entorpecentes = this.entorpecentesFake
+    let entorpecentes = this.entorpecente
     .filter(
       function(elemento) {
         return elemento.id == id
