@@ -3,7 +3,6 @@ import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
-import { ListPage } from '../pages/list/list';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { CadastroPage } from '../pages/cadastro/cadastro';
@@ -30,6 +29,9 @@ import { VisitanteProvider } from '../providers/visitante/visitante';
 import { CadastroVisitantePage } from '../pages/cadastro-visitante/cadastro-visitante';
 import { ListaVisitantePageModule } from '../pages/lista-visitante/lista-visitante.module';
 import { ListaVisitantePage } from '../pages/lista-visitante/lista-visitante';
+import { CategoriasProvider } from '../providers/categorias/categorias';
+import { CadastroCategoriaPage } from '../pages/cadastro-categoria/cadastro-categoria';
+import { CadastroCategoriaPageModule } from '../pages/cadastro-categoria/cadastro-categoria.module';
 import { CargosProvider } from '../providers/cargos/cargos';
 import { ListaCargoPage } from '../pages/lista-cargo/lista-cargo';
 import { CadastroCargoPage } from '../pages/cadastro-cargo/cadastro-cargo';
@@ -47,13 +49,13 @@ import { ListaEntorpecentePage } from '../pages/lista-entorpecente/lista-entorpe
     CadastroMensagensPage,
     ListaMensagens2Page,
     CadastroMensagens2Page,
-    ListPage,
     CadastroNoticiaPage,
     LoginPage,
     ListaLocalPage,
     CadastroLocalPage,
     CadastroVisitantePage,
     ListaVisitantePage,
+    CadastroCategoriaPage,
     ListaCargoPage,
     CadastroCargoPage,
     ListaEntorpecentePage,
@@ -77,13 +79,13 @@ import { ListaEntorpecentePage } from '../pages/lista-entorpecente/lista-entorpe
     CadastroMensagensPage,
     ListaMensagens2Page,
     CadastroMensagens2Page,
-    ListPage,
     CadastroNoticiaPage,
     LoginPage,
     ListaLocalPage,
     CadastroLocalPage,
     CadastroVisitantePage,
     ListaVisitantePage,
+    CadastroCategoriaPage,
     ListaCargoPage,
     CadastroCargoPage,
     ListaEntorpecentePage,
@@ -101,6 +103,7 @@ import { ListaEntorpecentePage } from '../pages/lista-entorpecente/lista-entorpe
     UploadProvider,
     LocaisProvider,
     VisitanteProvider,
+    CategoriasProvider,
     CargosProvider,
     EntorpecenteProvider,
   

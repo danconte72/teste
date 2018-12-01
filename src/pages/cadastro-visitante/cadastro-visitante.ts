@@ -25,6 +25,7 @@ export class CadastroVisitantePage {
      private provedor: VisitanteProvider,
      ) {
       let id = this.navParams.data.id;
+      console.log(id);
       if (id != null){// editar
         this.visitante = this.provedor.listarPorId(id);
       } else {//novo

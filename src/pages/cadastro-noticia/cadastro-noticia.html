@@ -43,12 +43,48 @@
 </ion-col>
   </ion-row>
 
+<ion-row>
+    <ion-col col-6>
+        <ion-item>
+            <ion-label>Categoria da Notícia</ion-label>
+            <ion-select [(ngModel)]="gender">
+              <ion-option value="s">Saúde</ion-option>
+              <ion-option value="b">Bem Estar</ion-option>
+            </ion-select>
+          </ion-item>
+    </ion-col>
 
-
-
-
-
-  <button ion-button full>Publicar</button>
-
+    <ion-col col-6>
+    
+            <button ion-button full (click)="adicionar()">Adicionar Nova Categoria </button>
   
+      </ion-col>  
+
+</ion-row>
+
+
+<ion-row>
+    <div>
+        <p class="espaco"> </p>        
+
+       </div> 
+</ion-row>
+
+<button ion-button full>Publicar</button>
+<ion-row>
+    <div>
+        <p class="espaco"> </p>        
+
+       </div> 
+</ion-row>
+<ion-row>
+    <ion-col col-12>
+    <div class="rodape">
+        <p > R Herculano Coelho de Souza, 1157 </p>        
+       </div> 
+      </ion-col>  
+       
+</ion-row>
+
 </ion-content>
+

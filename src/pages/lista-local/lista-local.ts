@@ -18,14 +18,18 @@ import { CadastroLocalPage } from '../cadastro-local/cadastro-local';
 })
 export class ListaLocalPage {
 
-  private lista: Array<Local>;
+  private lista;
 
   constructor(
     public navCtrl: NavController, 
     public navParams: NavParams,
     private provedor: LocaisProvider
-  ) {
-   this.lista = this.provedor.listar();
+    ) {
+      this.provedor.listar().then( 
+        data => {
+          this.lista = data;
+        }
+      );
   }
 
   adicionar() {
