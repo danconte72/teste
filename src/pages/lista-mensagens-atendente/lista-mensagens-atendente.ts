@@ -2,8 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { MensagensProvider } from '../../providers/mensagens/mensagens';
 import { Mensagem } from '../../models/mensagem';
-import { CadastroMensagensPage } from '../cadastro-mensagens/cadastro-mensagens';
-import { CadastroMensagens2Page } from '../cadastro-mensagens2/cadastro-mensagens2';
+import { CadastroMensagensAtendentePage } from '../cadastro-mensagens-atendente/cadastro-mensagens-atendente';
 
 /**
  * Generated class for the ListaMensagensPage page.
@@ -14,10 +13,10 @@ import { CadastroMensagens2Page } from '../cadastro-mensagens2/cadastro-mensagen
 
 @IonicPage()
 @Component({
-  selector: 'page-lista-mensagens2',
-  templateUrl: 'lista-mensagens2.html',
+  selector: 'page-lista-mensagens-atendente',
+  templateUrl: 'lista-mensagens-atendente.html',
 })
-export class ListaMensagens2Page {
+export class ListaMensagensAtendentePage {
 
   private lista: Array<Mensagem>;
 
@@ -31,11 +30,11 @@ export class ListaMensagens2Page {
 
   adicionar() {
     console.log("deveria chamar a tela de cadastro");
-    this.navCtrl.push(CadastroMensagens2Page);
+    this.navCtrl.push(CadastroMensagensAtendentePage);
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad ListaMensagens2Page');
+    console.log('ionViewDidLoad ListaMensagensAtendentePage');
   }
 
 }

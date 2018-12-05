@@ -24,7 +24,7 @@ export class UsuariosProvider {
 
   salvar(usuario: Usuario) {
     if(usuario.id == null){
-      return this.http.get(`https://caps-ad.herokuapp.com/public/usuario/cadastrarUsuario/${usuario.nome}/${usuario.eMail}/${usuario.login}/${usuario.senha}/${usuario.sexo}/${usuario.telefone}/${usuario.cpf}/${usuario.dataNasc}`).toPromise();
+      return this.http.get(`https://caps-ad.herokuapp.com/public/usuario/cadastrarUsuario/${usuario.nome}/${usuario.email}/${usuario.login}/${usuario.senha}/${usuario.sexo}/${usuario.telefone}/${usuario.cpf}/${usuario.datanasc}`).toPromise();
     } else {
       console.log("estou editando o seguinte usuario:");
     }
