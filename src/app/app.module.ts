@@ -38,6 +38,7 @@ import { CadastroCargoPage } from '../pages/cadastro-cargo/cadastro-cargo';
 import { EntorpecenteProvider } from '../providers/entorpecente/entorpecente';
 import { CadastroEntorpecentePage } from '../pages/cadastro-entorpecente/cadastro-entorpecente';
 import { ListaEntorpecentePage } from '../pages/lista-entorpecente/lista-entorpecente';
+import { ListaChatPage } from '../pages/lista-chat/lista-chat';
 
 @NgModule({
   declarations: [
@@ -60,6 +61,7 @@ import { ListaEntorpecentePage } from '../pages/lista-entorpecente/lista-entorpe
     CadastroCargoPage,
     ListaEntorpecentePage,
     CadastroEntorpecentePage,
+    ListaChatPage,
   ],
   imports: [ 
 
@@ -90,6 +92,7 @@ import { ListaEntorpecentePage } from '../pages/lista-entorpecente/lista-entorpe
     CadastroCargoPage,
     ListaEntorpecentePage,
     CadastroEntorpecentePage,
+    ListaChatPage,
     
   ],
   providers: [

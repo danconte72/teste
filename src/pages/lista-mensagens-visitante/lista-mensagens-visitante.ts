@@ -19,14 +19,19 @@ import { CadastroMensagensVisitantePage } from '../cadastro-mensagens-visitante/
 })
 export class ListaMensagensVisitantePage {
 
-  private lista: Array<Mensagem>;
+  private lista;
 
   constructor(
     public navCtrl: NavController, 
     public navParams: NavParams,
     private provedor: MensagensProvider
     ) {
-    this.lista = this.provedor.listar();
+      this.provedor.listar(1).then( 
+        data => {
+          this.lista = data;
+        }
+      )
+      ;
   }
 
   adicionar() {

@@ -17,6 +17,7 @@ import { CadastroVisitantePage } from '../pages/cadastro-visitante/cadastro-visi
 import { ListaVisitantePage } from '../pages/lista-visitante/lista-visitante';
 import { ListaCargoPage } from '../pages/lista-cargo/lista-cargo';
 import { ListaEntorpecentePage } from '../pages/lista-entorpecente/lista-entorpecente';
+import { ListaChatPage } from '../pages/lista-chat/lista-chat';
 
 
 @Component({
@@ -42,7 +43,8 @@ export class MyApp {
       { title: 'Visitantes', component: ListaVisitantePage },
       { title: 'Cargos', component: ListaCargoPage },
       { title: 'Entorpecentes', component: ListaEntorpecentePage },
-      { title: 'CadastrarNoticia', component: CadastroNoticiaPage},
+      { title: 'Cadastrar Noticia', component: CadastroNoticiaPage},
+      { title: 'Listar Chats', component: ListaChatPage},
 
     ];
 

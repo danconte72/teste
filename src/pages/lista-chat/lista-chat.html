@@ -1,0 +1,30 @@
+<!--
+  Generated template for the ListaChatPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Lista de Chats</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-list>
+    <ion-list-header>
+      Chat
+      <button ion-button icon-only item-end clear>
+        <ion-icon name="ios-chatboxes"></ion-icon>
+      </button>
+    </ion-list-header>
+    <ion-item *ngFor="let chat of lista">
+      <ion-label>
+        <h2>{{chat.protocolo}}</h2>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>
