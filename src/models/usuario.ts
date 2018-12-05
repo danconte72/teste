@@ -1,11 +1,11 @@
 export class Usuario {
   id : string;
   nome : string;
-  eMail : string;
+  email : string;
   sexo : string;
   telefone : string;
   cpf : string;
-  dataNasc : string;
+  datanasc : string;
   login : string;
   senha : string;
   constructor() {

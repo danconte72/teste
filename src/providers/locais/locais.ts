@@ -25,7 +25,7 @@ export class LocaisProvider {
 
   salvar(local: Local) {
     if(local.id == null){
-      return this.http.get(`https://caps-ad.herokuapp.com/public/local/cadastrarLocal/${local.cidade}/${local.bairro}`).toPromise();
+      return this.http.get(`https://caps-ad.herokuapp.com/public/local/cadastrar/${local.cidade}/${local.bairro}`).toPromise();
     } else {
       console.log("estou editando o seguinte usuario:");
     }
