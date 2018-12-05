@@ -19,14 +19,18 @@ import { CadastroEntorpecentePage } from '../cadastro-entorpecente/cadastro-ento
 })
 export class ListaEntorpecentePage {
 
-  private lista: Array<Entorpecente>;
+  private lista;
 
   constructor(
     public navCtrl: NavController, 
     public navParams: NavParams,
     private provedor: EntorpecenteProvider,
   ) {
-    this.lista = this.provedor.listar();
+    this.provedor.listar().then( 
+      data => {
+        this.lista = data;
+      }
+    );
   }
 
   adicionar() {
