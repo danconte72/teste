@@ -4,9 +4,9 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { HomePage } from '../pages/home/home';
 import { ListaUsuarioPage } from '../pages/lista-usuario/lista-usuario';
-import {CadastroMensagensPage} from '../pages/cadastro-mensagens/cadastro-mensagens';
-import { ListaMensagensPage } from '../pages/lista-mensagens/lista-mensagens';
-import { ListaMensagens2Page } from '../pages/lista-mensagens2/lista-mensagens2';
+import {CadastroMensagensAtendentePage} from '../pages/cadastro-mensagens-atendente/cadastro-mensagens-atendente';
+import { ListaMensagensAtendentePage } from '../pages/lista-mensagens-atendente/lista-mensagens-atendente';
+import { ListaMensagensVisitantePage } from '../pages/lista-mensagens-visitante/lista-mensagens-visitante';
 import { CadastroPage} from '../pages/cadastro/cadastro';
 import { CadastroNoticiaPage} from '../pages/cadastro-noticia/cadastro-noticia';
 import { LoginPage } from '../pages/login/login';
@@ -35,8 +35,8 @@ export class MyApp {
     // used for an example of ngFor and navigation
     this.pages = [
       { title: 'Home', component: HomePage },
-      { title: 'Listar Mensagens', component: ListaMensagensPage},
-      { title: 'Listar Mensagens2', component: ListaMensagens2Page},
+      { title: 'Listar Mensagens Atendente', component: ListaMensagensAtendentePage},
+      { title: 'Listar Mensagens Visitante', component: ListaMensagensVisitantePage},
       { title: 'Usuários', component: ListaUsuarioPage },
       { title: 'Local', component: ListaLocalPage },
       { title: 'Visitantes', component: ListaVisitantePage },

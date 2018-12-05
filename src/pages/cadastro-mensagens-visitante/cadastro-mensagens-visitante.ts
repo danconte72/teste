@@ -12,10 +12,10 @@ import { MensagensProvider } from '../../providers/mensagens/mensagens';
 
 @IonicPage()
 @Component({
-  selector: 'page-cadastro-mensagens',
-  templateUrl: 'cadastro-mensagens.html',
+  selector: 'page-cadastro-mensagens-visitante',
+  templateUrl: 'cadastro-mensagens-visitante.html',
 })
-export class CadastroMensagensPage {
+export class CadastroMensagensVisitantePage {
 
   private mensagem : Mensagem;
   constructor(
@@ -27,14 +27,14 @@ export class CadastroMensagensPage {
   }
 
   salvar() {
-    this.mensagem.remetente="A";
+    this.mensagem.remetente="V";
     console.log(this.mensagem);
     console.log(this.provedor.salvar(this.mensagem));
     this.navCtrl.pop();
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad CadastroMensagensPage');
+    console.log('ionViewDidLoad CadastroMensagensVisitantePage');
   }
 
 }

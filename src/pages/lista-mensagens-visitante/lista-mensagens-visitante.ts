@@ -2,10 +2,11 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { MensagensProvider } from '../../providers/mensagens/mensagens';
 import { Mensagem } from '../../models/mensagem';
-import { CadastroMensagensPage } from '../cadastro-mensagens/cadastro-mensagens';
+import { CadastroMensagensAtendentePage } from '../cadastro-mensagens-atendente/cadastro-mensagens-atendente';
+import { CadastroMensagensVisitantePage } from '../cadastro-mensagens-visitante/cadastro-mensagens-visitante';
 
 /**
- * Generated class for the ListaMensagensPage page.
+ * Generated class for the ListaMensagensVisitantePage page.
  *
  * See https://ionicframework.com/docs/components/#navigation for more info on
  * Ionic pages and navigation.
@@ -13,10 +14,10 @@ import { CadastroMensagensPage } from '../cadastro-mensagens/cadastro-mensagens'
 
 @IonicPage()
 @Component({
-  selector: 'page-lista-mensagens',
-  templateUrl: 'lista-mensagens.html',
+  selector: 'page-lista-mensagens-visitante',
+  templateUrl: 'lista-mensagens-visitante.html',
 })
-export class ListaMensagensPage {
+export class ListaMensagensVisitantePage {
 
   private lista: Array<Mensagem>;
 
@@ -30,11 +31,11 @@ export class ListaMensagensPage {
 
   adicionar() {
     console.log("deveria chamar a tela de cadastro");
-    this.navCtrl.push(CadastroMensagensPage);
+    this.navCtrl.push(CadastroMensagensVisitantePage);
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad ListaMensagensPage');
+    console.log('ionViewDidLoad ListaMensagensVisitantePage');
   }
 
 }

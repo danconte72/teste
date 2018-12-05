@@ -10,10 +10,10 @@ import { UsuariosProvider } from '../providers/usuarios/usuarios';
 import { HttpClientModule } from '@angular/common/http';
 import { ListaUsuarioPage } from '../pages/lista-usuario/lista-usuario';
 import { MensagensProvider } from '../providers/mensagens/mensagens';
-import { CadastroMensagensPage } from '../pages/cadastro-mensagens/cadastro-mensagens';
-import { ListaMensagensPage } from '../pages/lista-mensagens/lista-mensagens';
-import { CadastroMensagens2Page } from '../pages/cadastro-mensagens2/cadastro-mensagens2';
-import { ListaMensagens2Page } from '../pages/lista-mensagens2/lista-mensagens2';
+import { CadastroMensagensAtendentePage } from '../pages/cadastro-mensagens-atendente/cadastro-mensagens-atendente';
+import { ListaMensagensAtendentePage } from '../pages/lista-mensagens-atendente/lista-mensagens-atendente';
+import { CadastroMensagensVisitantePage } from '../pages/cadastro-mensagens-visitante/cadastro-mensagens-visitante';
+import { ListaMensagensVisitantePage } from '../pages/lista-mensagens-visitante/lista-mensagens-visitante';
 import { NoticiaProvider } from '../providers/noticia/noticia';
 import { CadastroNoticiaPage } from '../pages/cadastro-noticia/cadastro-noticia';
 import { LoginPage } from '../pages/login/login';
@@ -45,10 +45,10 @@ import { ListaEntorpecentePage } from '../pages/lista-entorpecente/lista-entorpe
     HomePage,
     CadastroPage,
     ListaUsuarioPage,
-    ListaMensagensPage,
-    CadastroMensagensPage,
-    ListaMensagens2Page,
-    CadastroMensagens2Page,
+    ListaMensagensAtendentePage,
+    CadastroMensagensAtendentePage,
+    ListaMensagensVisitantePage,
+    CadastroMensagensVisitantePage,
     CadastroNoticiaPage,
     LoginPage,
     ListaLocalPage,
@@ -75,10 +75,10 @@ import { ListaEntorpecentePage } from '../pages/lista-entorpecente/lista-entorpe
     HomePage,
     CadastroPage,
     ListaUsuarioPage,
-    ListaMensagensPage,
-    CadastroMensagensPage,
-    ListaMensagens2Page,
-    CadastroMensagens2Page,
+    ListaMensagensAtendentePage,
+    CadastroMensagensAtendentePage,
+    ListaMensagensVisitantePage,
+    CadastroMensagensVisitantePage,
     CadastroNoticiaPage,
     LoginPage,
     ListaLocalPage,
