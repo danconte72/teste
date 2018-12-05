@@ -12,25 +12,20 @@ import { Cargo } from '../../models/cargo';
 @Injectable()
 export class CargosProvider {
 
-  private cargoFake = [
-    {
-      "id" : "1",
-      "nome" : "Lorivaldo Paulek", 
-      "setor" : "Fisioterapeuta"
-    },
-    {
-      "id" : "2",
-      "nome" : "Ronaldinho Gaucho",
-      "setor" : "Direcao"
-    }
-  ];
+  private cargo;
 
   constructor(public http: HttpClient) {
     console.log('Hello cargosProvider Provider');
   }
 
   listar() {
-    return this.http.get('https://caps-ad.herokuapp.com/public/cargos').toPromise();
+    return this.http.get('https://caps-ad.herokuapp.com/public/cargos').toPromise()
+    .then(
+      data=>{
+        this.cargo = data;
+        return data;
+      }
+    );
   }
 
   salvar(cargo : Cargo) {
@@ -46,7 +41,7 @@ export class CargosProvider {
   }
 
   listarPorId(id){
-    let cargo = this.cargoFake
+    let cargo = this.cargo
     .filter(
       function(elemento) {
         return elemento.id == id

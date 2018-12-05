@@ -6,37 +6,20 @@ import { Usuario } from '../../models/usuario';
 export class UsuariosProvider {
 
 
-  private usuariosFake = [
-    { 
-        "id" : "000001",
-        "nome" : "volmar",
-        "eMail" : "volmar@gmail.com",
-        "login" : "volmar01",
-        "senha" : "12345",
-        "sexo" : "Masculino",
-        "telefone" : "49 3567-0000",
-        "cpf" : "000.111.222-33",
-        "dataNasc" : "24-12-1924"    
-    },  
-    {
-        "id" : "000002",
-        "nome" : "guilherme",
-        "eMail" : "guilhermer@gmail.com",
-        "login" : "gui01",
-        "senha" : "gloriadeus",
-        "sexo" : "Masculino",
-        "telefone" : "49 3567-1111",
-        "cpf" : "012.345.678-90",
-        "dataNasc" : "05-10-1998"
-    } 
-];
+  private usuario;
 
   constructor(public http: HttpClient) {
     console.log('Hello UsuariosProvider Provider');
   }
 
   listar() {
-    return this.http.get('https://caps-ad.herokuapp.com/public/usuarios').toPromise();
+    return this.http.get('https://caps-ad.herokuapp.com/public/usuario').toPromise()
+    .then(
+      data=>{
+        this.usuario = data;
+        return data;
+      }
+    );
   }
 
   salvar(usuario: Usuario) {
@@ -52,7 +35,7 @@ export class UsuariosProvider {
   }
 
   listarPorId(id){
-    let usuario = this.usuariosFake
+    let usuario = this.usuario
     .filter(
       function(elemento) {
         return elemento.id == id

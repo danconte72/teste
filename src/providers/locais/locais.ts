@@ -7,25 +7,20 @@ import { LocaleData } from 'ionic-angular/umd/util/datetime-util';
 @Injectable()
 export class LocaisProvider {
 
-  private localFake = [
-    {
-      "id" : "1",
-      "cidade" : "cacador", 
-      "bairro" : "Municipios"
-    },
-    {
-      "id" : "2",
-      "cidade" : "calmon",
-      "bairro" : "centro"
-    },
-  ];
+  private local;
 
   constructor(public http: HttpClient) {
     console.log('Hello locaisProvider Provider');
   }
 
   listar() {
-    return this.http.get('https://caps-ad.herokuapp.com/public/local').toPromise();
+    return this.http.get('https://caps-ad.herokuapp.com/public/local').toPromise()
+    .then(
+      data=>{
+        this.local = data;
+        return data;
+      }
+    );
   }
 
   salvar(local: Local) {
@@ -41,7 +36,7 @@ export class LocaisProvider {
   }
 
   listarPorId(id){
-    let local = this.localFake
+    let local = this.local
     .filter(
       function(elemento) {
         return elemento.id == id

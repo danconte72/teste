@@ -16,7 +16,8 @@ import { from } from 'rxjs/observable/from';
 import { CadastroVisitantePage } from '../pages/cadastro-visitante/cadastro-visitante';
 import { ListaVisitantePage } from '../pages/lista-visitante/lista-visitante';
 import { ListaCargoPage } from '../pages/lista-cargo/lista-cargo';
-import { ListPage } from '../pages/list/list';
+import { ListaEntorpecentePage } from '../pages/lista-entorpecente/lista-entorpecente';
+
 
 @Component({
   templateUrl: 'app.html'
@@ -37,10 +38,10 @@ export class MyApp {
       { title: 'Listar Mensagens', component: ListaMensagensPage},
       { title: 'Listar Mensagens2', component: ListaMensagens2Page},
       { title: 'Usuários', component: ListaUsuarioPage },
-      { title: 'List', component: ListPage },
       { title: 'Local', component: ListaLocalPage },
       { title: 'Visitantes', component: ListaVisitantePage },
       { title: 'Cargos', component: ListaCargoPage },
+      { title: 'Entorpecentes', component: ListaEntorpecentePage },
       { title: 'CadastrarNoticia', component: CadastroNoticiaPage},
 
     ];

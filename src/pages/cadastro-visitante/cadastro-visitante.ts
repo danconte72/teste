@@ -19,12 +19,14 @@ import { VisitanteProvider } from '../../providers/visitante/visitante';
 export class CadastroVisitantePage {
 
   private visitante: Visitante;
+  
   constructor(
     public navCtrl: NavController,
      public navParams: NavParams,
      private provedor: VisitanteProvider,
      ) {
       let id = this.navParams.data.id;
+      console.log(id);
       if (id != null){// editar
         this.visitante = this.provedor.listarPorId(id);
       } else {//novo
