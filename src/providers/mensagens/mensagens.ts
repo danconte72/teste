@@ -12,40 +12,47 @@ import { chat } from '../../models/chat';
 @Injectable()
 export class MensagensProvider {
 
-  private Mensagens= [
-    { 
-      "protocolo": "1",
-      "observacao": "bem observado",
-      "entorpecente": "2",
-      "dataFim": "13/10/1998"
-    },
-  ];
+  private mensagens;
 
   constructor(public http: HttpClient) {
     console.log('Hello MensagensProvider Provider');
   }
 
-  // listar(protocolo) {
-  //   return this.http.get(`https://caps-ad.herokuapp.com/public/chat/${protocolo}/mensagens`).toPromise()
-  //   .then(
-  //     data=>{
-  //       this.Mensagens = data;
-  //       return data;
-  //     }
-  //   );
-  // }
+  listar(protocolo) {
+    return this.http.get(`https://caps-ad.herokuapp.com/public/chat/${protocolo}/mensagens`).toPromise()
+    .then(
+      data=>{
+        this.mensagens = data;
+        let mensagens = this.mensagens
+        .filter(
+          function(elemento) {
+            return elemento.protocolo = protocolo;
+          }
+        )
+        return mensagens;
+      }
+    );
+  }
 
   listarChat() {
-    // return this.http.get(`https://caps-ad.herokuapp.com/public/chat`).toPromise()
-    // .then(
-    //   data=>{
-        // this.Mensagens = data;
-        return this.Mensagens;
+    return this.http.get(`https://caps-ad.herokuapp.com/public/chat`).toPromise()
+    .then(
+      data=>{
+        this.mensagens = data;
+        let mensagens = this.mensagens
+        .filter(
+          function(elemento) {
+            return elemento.datafim == null
+            console.log(mensagens)
+          }
+        )
+        return mensagens;
       }
-    // );
+    );
+  }
   
   salvar(mensagem) {
-    this.Mensagens.push(mensagem);
+    this.mensagens.push(mensagem);
     console.log("Mensagem Salva");
     console.log(mensagem);
     return {

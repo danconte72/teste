@@ -16,18 +16,20 @@ import { MensagensProvider } from '../../providers/mensagens/mensagens';
 })
 export class ListaChatPage {
 
-  private lista;
+  private lista =[];
 
   constructor(
     public navCtrl: NavController, 
     public navParams: NavParams,
     private provedor: MensagensProvider,
     ) {
-      this.lista = this.provedor.listarChat(); 
-      //   data => {
-      //     this.lista = data;
-      //   }
-      // ;
+      this.provedor.listarChat() //falta filtrar
+      .then(
+        data => {
+          console.log(data);
+          this.lista = data;
+        }
+      ) 
     }
 
   ionViewDidLoad() {

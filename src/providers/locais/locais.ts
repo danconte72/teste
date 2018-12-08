@@ -14,7 +14,7 @@ export class LocaisProvider {
   }
 
   listar() {
-    return this.http.get('https://caps-ad.herokuapp.com/public/local').toPromise()
+    return this.http.get('https://caps-ad.herokuapp.com/public/locais').toPromise()
     .then(
       data=>{
         this.local = data;

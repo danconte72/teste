@@ -18,7 +18,7 @@ export class VisitanteProvider {
   }
 
   listar() {
-    return this.http.get('https://caps-ad.herokuapp.com/public/visitante').toPromise()
+    return this.http.get('https://caps-ad.herokuapp.com/public/visitantes').toPromise()
     .then(
       data=>{
         this.visitantes = data;
@@ -29,7 +29,7 @@ export class VisitanteProvider {
 
   salvar(visitante: Visitante) {
     if(visitante.id == null){
-      return this.http.get(`https://caps-ad.herokuapp.com/public/visitante/cadatrarVisitante/${visitante.nome}/${visitante.telefone}/${visitante.sexo}/${visitante.idade}/${visitante.local}`).toPromise();
+      return this.http.get(`https://caps-ad.herokuapp.com/public/visitante/cadatrar/${visitante.nome}/${visitante.telefone}/${visitante.sexo}/${visitante.idade}/${visitante.local}`).toPromise();
     } else {
       console.log("estou editando o seguinte usuario:");
     }

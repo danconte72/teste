@@ -12,7 +12,7 @@ export class EntorpecenteProvider {
   }
 
   listar() {
-    return this.http.get('https://caps-ad.herokuapp.com/public/entorpecente').toPromise()
+    return this.http.get('https://caps-ad.herokuapp.com/public/entorpecentes').toPromise()
     .then(
       data=>{
         this.entorpecente = data;
@@ -24,7 +24,7 @@ export class EntorpecenteProvider {
   salvar(entorpecente : Entorpecente) {
     if(entorpecente.id == null){
       this.entorpecente.push(entorpecente);
-      return this.http.get(`https://caps-ad.herokuapp.com/public/local/cadastrarEntorpecente/${entorpecente.nome}`).toPromise();      
+      return this.http.get(`https://caps-ad.herokuapp.com/public/entorpecente/cadastrar/${entorpecente.nome}`).toPromise();      
     } else {
       console.log("estou editando o seguinte usuario:");
     }

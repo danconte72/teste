@@ -30,7 +30,7 @@ export class CargosProvider {
 
   salvar(cargo : Cargo) {
     if(cargo.id == null){
-      return this.http.get(`https://caps-ad.herokuapp.com/public/cargos/cadastrar/${cargo.nome}/${cargo.setor}`).toPromise();
+      return this.http.get(`https://caps-ad.herokuapp.com/public/cargo/cadastrar/${cargo.nome}/${cargo.setor}`).toPromise();
     } else {
       console.log("estou editando o seguinte usuario:");
     }
