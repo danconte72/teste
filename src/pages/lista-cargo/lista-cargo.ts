@@ -18,7 +18,7 @@ import { CadastroCargoPage } from '../cadastro-cargo/cadastro-cargo';
 })
 export class ListaCargoPage {
 
-  private lista;
+  private lista:any = [];
 
   constructor(
     public navCtrl: NavController, 

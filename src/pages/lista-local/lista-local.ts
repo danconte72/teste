@@ -18,7 +18,7 @@ import { CadastroLocalPage } from '../cadastro-local/cadastro-local';
 })
 export class ListaLocalPage {
 
-  private lista;
+  private lista:any =[];
 
   constructor(
     public navCtrl: NavController, 

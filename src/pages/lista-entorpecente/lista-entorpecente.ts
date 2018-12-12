@@ -19,7 +19,7 @@ import { CadastroEntorpecentePage } from '../cadastro-entorpecente/cadastro-ento
 })
 export class ListaEntorpecentePage {
 
-  private lista;
+  private lista:any = [];
 
   constructor(
     public navCtrl: NavController, 

@@ -43,7 +43,6 @@ export class MensagensProvider {
         .filter(
           function(elemento) {
             return elemento.datafim == null
-            console.log(mensagens)
           }
         )
         return mensagens;
