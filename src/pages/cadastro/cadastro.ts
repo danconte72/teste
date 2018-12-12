@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, Refresher } from 'ionic-angular';
 import { Usuario } from '../../models/usuario';
 import { UsuariosProvider } from '../../providers/usuarios/usuarios';
 
@@ -9,6 +9,7 @@ import { UsuariosProvider } from '../../providers/usuarios/usuarios';
   templateUrl: 'cadastro.html',
 })
 export class CadastroPage {
+
   private usuario: Usuario;
 
   constructor(

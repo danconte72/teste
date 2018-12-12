@@ -13,7 +13,7 @@ import { CadastroPage } from '../cadastro/cadastro';
 export class ListaUsuarioPage {
 
 
-  private lista;
+  private lista: any =[];
 
   constructor(
     public navCtrl: NavController, 
@@ -24,9 +24,16 @@ export class ListaUsuarioPage {
         data => {
           this.lista = data;
         }
-      )
-      ;
+      );
     }
+  
+  ionViewDidEnter(){
+    this.provedor.listar().then( 
+      data => {
+        this.lista = data;
+      }
+    );
+  }
 
   adicionar() {
     console.log("deveria chamar a tela de cadastro");

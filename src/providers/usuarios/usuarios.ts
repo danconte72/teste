@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Usuario } from '../../models/usuario';
+import { Refresher } from 'ionic-angular';
 
 @Injectable()
 export class UsuariosProvider {
@@ -43,5 +44,4 @@ export class UsuariosProvider {
     )
     return usuario[0];
   }
-
 }
