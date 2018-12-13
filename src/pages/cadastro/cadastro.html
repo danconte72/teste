@@ -26,7 +26,11 @@
     </ion-item>
     <ion-item>
       <ion-label color="primary" floating>Sexo</ion-label>
-      <ion-input [(ngModel)]="usuario.sexo" ></ion-input>
+      <ion-select [(ngModel)]="usuario.sexo">
+        <ion-option [value]="0">indefinido</ion-option>
+        <ion-option [value]="1">M</ion-option>
+        <ion-option [value]="2">F</ion-option>
+      </ion-select>
     </ion-item>
     <ion-item>
       <ion-label color="primary" floating>Telefone</ion-label>
