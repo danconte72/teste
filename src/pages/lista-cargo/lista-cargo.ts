@@ -33,12 +33,22 @@ export class ListaCargoPage {
       ;
     }
 
+  ionViewDidEnter(){
+    console.log("deveria atualizar a pagina");
+    this.provedor.listar().then( 
+      data => {
+        this.lista = data;
+       }
+    );
+  }  
+
   adicionar() {
     console.log("deveria chamar a tela de cadastro");
     this.navCtrl.push(CadastroCargoPage);
   }
 
   editar(id) {
+    console.log(id);
     console.log("deveria chamar a tela de ediçao");
     this.navCtrl.push(CadastroCargoPage,
       {

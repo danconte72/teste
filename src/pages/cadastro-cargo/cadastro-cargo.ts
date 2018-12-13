@@ -26,6 +26,7 @@ export class CadastroCargoPage {
       let id = this.navParams.data.id;
       if (id != null){// editar
         this.cargo = this.provedor.listarPorId(id);
+        console.log(this.cargo);
       } else {//novo
         this.cargo = new Cargo();
       }
