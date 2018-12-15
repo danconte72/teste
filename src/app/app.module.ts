@@ -39,6 +39,8 @@ import { EntorpecenteProvider } from '../providers/entorpecente/entorpecente';
 import { CadastroEntorpecentePage } from '../pages/cadastro-entorpecente/cadastro-entorpecente';
 import { ListaEntorpecentePage } from '../pages/lista-entorpecente/lista-entorpecente';
 import { ListaChatPage } from '../pages/lista-chat/lista-chat';
+import { AuditProvider } from '../providers/audit/audit';
+import { ListaAuditPage } from '../pages/lista-audit/lista-audit';
 
 @NgModule({
   declarations: [
@@ -62,6 +64,7 @@ import { ListaChatPage } from '../pages/lista-chat/lista-chat';
     ListaEntorpecentePage,
     CadastroEntorpecentePage,
     ListaChatPage,
+    ListaAuditPage,
   ],
   imports: [ 
 
@@ -93,6 +96,7 @@ import { ListaChatPage } from '../pages/lista-chat/lista-chat';
     ListaEntorpecentePage,
     CadastroEntorpecentePage,
     ListaChatPage,
+    ListaAuditPage,
     
   ],
   providers: [
@@ -109,6 +113,7 @@ import { ListaChatPage } from '../pages/lista-chat/lista-chat';
     CategoriasProvider,
     CargosProvider,
     EntorpecenteProvider,
+    AuditProvider,
   
   ],
 })
