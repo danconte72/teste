@@ -26,11 +26,7 @@ export class EntorpecenteProvider {
       this.entorpecente.push(entorpecente);
       return this.http.get(`https://caps-ad.herokuapp.com/public/entorpecente/cadastrar/${entorpecente.nome}`).toPromise();      
     } else {
-      console.log("estou editando o seguinte usuario:");
-    }
-    console.log(entorpecente);
-    return {
-      "id": entorpecente.id
+      return this.http.get(`https://caps-ad.herokuapp.com/public/entorpecente/cadastrar/${entorpecente.nome}/${entorpecente.id}`).toPromise(); 
     }
   }
 
