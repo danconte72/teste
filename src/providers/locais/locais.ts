@@ -27,11 +27,7 @@ export class LocaisProvider {
     if(local.id == null){
       return this.http.get(`https://caps-ad.herokuapp.com/public/local/cadastrar/${local.cidade}/${local.bairro}`).toPromise();
     } else {
-      console.log("estou editando o seguinte usuario:");
-    }
-    console.log(local);
-    return {
-      "id": local.id
+      return this.http.get(`https://caps-ad.herokuapp.com/public/local/cadastrar/${local.cidade}/${local.bairro}/${local.id}`).toPromise();
     }
   }
 
