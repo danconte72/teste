@@ -29,7 +29,7 @@ export class UsuariosProvider {
     } else {
       return this.http.get(`https://caps-ad.herokuapp.com/public/usuario/cadastrar/${usuario.nome}/${usuario.email}/${usuario.login}/${usuario.senha}/${usuario.sexo}/${usuario.telefone}/${usuario.cpf}/${usuario.datanasc}/${usuario.id}`).toPromise();
     }
-    console.log(usuario);
+    console.log(usuario)
     return {
       "id": usuario.id
     }
