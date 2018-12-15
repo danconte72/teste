@@ -31,12 +31,9 @@ export class VisitanteProvider {
     if(visitante.id == null){
       return this.http.get(`https://caps-ad.herokuapp.com/public/visitante/cadatrar/${visitante.nome}/${visitante.telefone}/${visitante.sexo}/${visitante.idade}/${visitante.local}`).toPromise();
     } else {
-      console.log("estou editando o seguinte usuario:");
+      return this.http.get(`https://caps-ad.herokuapp.com/public/visitante/cadatrar/${visitante.nome}/${visitante.telefone}/${visitante.sexo}/${visitante.idade}/${visitante.local}/${visitante.id}`).toPromise();
     }
-    console.log(visitante);
-    return {
-      "id": visitante.id
-    }
+    console.log(visitante.nome)
   }
 
   listarPorId(id){
