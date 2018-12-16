@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { Audit } from '../../models/audit';
 
 /**
  * Generated class for the ListaAuditPage page.
