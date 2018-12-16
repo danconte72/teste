@@ -29,9 +29,9 @@ export class VisitanteProvider {
 
   salvar(visitante: Visitante) {
     if(visitante.id == null){
-      return this.http.get(`https://caps-ad.herokuapp.com/public/visitante/cadatrar/${visitante.nome}/${visitante.telefone}/${visitante.sexo}/${visitante.idade}/${visitante.local}`).toPromise();
+      return this.http.get(`https://caps-ad.herokuapp.com/public/visitante/cadastrar/${visitante.nome}/${visitante.telefone}/${visitante.sexo}/${visitante.idade}/${visitante.local}`).toPromise();
     } else {
-      return this.http.get(`https://caps-ad.herokuapp.com/public/visitante/cadatrar/${visitante.nome}/${visitante.telefone}/${visitante.sexo}/${visitante.idade}/${visitante.local}/${visitante.id}`).toPromise();
+      return this.http.get(`https://caps-ad.herokuapp.com/public/visitante/cadastrar/${visitante.nome}/${visitante.telefone}/${visitante.sexo}/${visitante.idade}/${visitante.local}/${visitante.id}`).toPromise();
     }
   }
 

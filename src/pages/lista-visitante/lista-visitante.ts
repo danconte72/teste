@@ -18,7 +18,7 @@ import { CadastroVisitantePage } from '../cadastro-visitante/cadastro-visitante'
 })
 export class ListaVisitantePage {
 
-  private lista;
+  private lista: any =[];
 
   constructor(
     public navCtrl: NavController, 
@@ -31,6 +31,14 @@ export class ListaVisitantePage {
       }
     )
     ;
+  }
+
+  ionViewDidEnter(){
+    this.provedor.listar().then( 
+      data => {
+        this.lista = data;
+      }
+    );
   }
 
   adicionar() {
